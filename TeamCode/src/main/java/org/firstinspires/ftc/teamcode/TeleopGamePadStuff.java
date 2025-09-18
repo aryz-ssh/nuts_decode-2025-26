@@ -95,12 +95,17 @@ public class TeleopGamePadStuff {
             drivetrain.backRight.setPower(backRightPower);
 
 
-
+//Find out what to put in targetInSeconds
             if(gamepad1.left_stick_y < 0.0) {
                 drivetrain.moveForward( gamepad1.left_stick_y, 5);
             } else if (gamepad1.left_stick_y > 0.0) {
                 drivetrain.moveBackwards(gamepad1.left_stick_y,5);
+            }
 
+            if(gamepad1.left_stick_x < 0.0){
+                drivetrain.strafeLeft(gamepad1.left_stick_x, 5);
+            } else if (gamepad1.left_stick_x > 0.0) {
+                drivetrain.strafeRight(gamepad1.left_stick_x, 5);
             }
             //gamepad1
             //Position to score specimen
